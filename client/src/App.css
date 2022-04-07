@@ -1,6 +1,19 @@
 .App {
   text-align: center;
 }
+.Main {
+  display: flex;
+  width: 500px;
+  height: 700px;
+  flex-direction: row;
+  border: 2px solid;
+  padding: 6px;
+  margin-left: 50px;
+  margin-top: 50px;
+}
+.Child {
+  flex: 1;
+}
 
 #nav-body {
   background-color: white;
@@ -16,6 +29,39 @@
 #title {
   font-weight: 700;
   font-size: 1.5rem;
+}
+
+#name {
+  vertical-align: middle;
+}
+#name1 {
+  text-decoration: none;
+  color: black;
+}
+
+.menu {
+  margin: 1.5rem;
+  right: 0;
+  font-weight: 300;
+  position: absolute;
+}
+
+#menu1 {
+  text-decoration: none;
+  color: black;
+  margin: 0.7rem;
+}
+#menu2 {
+  text-decoration: none;
+  color: black;
+  margin: 0.7rem;
+}
+
+#menu2:hover {
+  color: #4000c7;
+}
+#menu1:hover {
+  color: #4000c7;
 }
 
 .App-header {

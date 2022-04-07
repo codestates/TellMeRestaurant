@@ -4,14 +4,22 @@ import { Link } from "react-router-dom";
 function Nav() {
   return (
     <div id="nav-body">
-      <span>
+      <span id="title">
         <img id="logo" src="" alt=""></img>
-        <span id="name">aroundbestR</span>
+        <span id="name">
+          <Link to="/" id="name1">
+            aroundbestR
+          </Link>
+        </span>
       </span>
-      <div id="login">login</div>
-      <Link to="/mypage">
-        <div id="mypage">mypage</div>
-      </Link>
+      <div className="menu">
+        <Link to="/login" id="menu1">
+          login
+        </Link>
+        <Link to="/mypage" id="menu2">
+          mypage
+        </Link>
+      </div>
     </div>
   );
 }
