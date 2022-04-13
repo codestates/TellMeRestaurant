@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import { addToText } from "../../actions/index";
+
 import styles from "./Signup.module.css";
 import axios from "axios";
 
