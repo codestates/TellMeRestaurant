@@ -11,13 +11,13 @@ import Writing from "./pages/writing/Writing";
 import Footer from "./pages/Footer/Footer";
 import axios from "axios";
 import MainFeed from "./pages/Mainpost/MainFeed";
+import Feed from "./pages/feed/Feed";
 
 function App() {
   const [accessToken, setAccessToken] = useState(null);
   const [isLogin, setIsLogin] = useState(true);
   const [info, setInfo] = useState(null);
   const [isGoogle, setIsGoogle] = useState(false);
-  const [listRender, setListRender] = useState(true);
 
   //로그인 성공 함수
   const handleResponseSuccess = (data) => {
@@ -73,6 +73,8 @@ function App() {
   /*********************메인 페이지 컨트롤 부분***************************/
   const [feeds, setFeeds] = useState([]); //전체 피드리스트
   const [sortValue, setSortValue] = useState("최신순");
+  const [listRender, setListRender] = useState(true);
+  const [selectedFeed, setSelectedFeed] = useState(null);
 
   useEffect(() => {
     setTimeout(() => {
@@ -108,6 +110,11 @@ function App() {
     }, 300);
   }, [listRender]);
 
+  const select = (el) => {
+    //썸네일 클릭 시
+    setSelectedFeed(el);
+  };
+
   return (
     <div className="App">
       <Router>
@@ -119,7 +126,7 @@ function App() {
         />
         <Switch>
           <Route path="/" exact>
-            <MainFeed feeds={feeds} />
+            <MainFeed feeds={feeds} handleClick={select} />
           </Route>
           <Route path="/mypage" exact>
             <Mypage isLogin={isLogin} info={info} />
@@ -127,6 +134,12 @@ function App() {
           <Route path="/login" exact>
             <Signup />
           </Route>
+          {selectedFeed ? (
+            <Route path="/feed">
+              <Feed selectedFeed={selectedFeed} />
+            </Route>
+          ) : null}
+
           <Route path="/writing">
             <Writing
               isLogin={isLogin}

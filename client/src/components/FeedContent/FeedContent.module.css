@@ -1,4 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jua&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@800&display=swap");
 
 .content {
   max-width: 2000px;
@@ -24,19 +26,27 @@
   background-color: white;
   margin: 30px 30px 30px 30px;
   /* padding: 10px 10px 0px 10px; */
+  font-family: "Nanum Gothic";
+  letter-spacing: 0.5px;
   text-align: left;
   border: 0.1px solid #e3e3e3;
 }
 
 .title1 {
-  font-family: "Noto Sans KR", cursive;
+  font-family: "Jua";
 }
 .titledetail {
   padding: 0px 10px 0px 10px;
 }
 .titlehashtag {
-  font-size: 13px;
+  display: flex;
+  margin-bottom: 5px;
+}
+.hashtag {
+  font-size: medium;
+  font-family: "Jua";
   color: #00376b;
+  padding-right: 0.3rem;
 }
 
 @media screen and (max-width: 1023px) {
