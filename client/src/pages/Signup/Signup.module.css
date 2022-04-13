@@ -8,9 +8,9 @@
   left: 0;
   right: 0;
   bottom: 0;
-
   display: grid;
   place-items: center;
+  text-align: center;
 }
 
 .signup {
@@ -24,8 +24,9 @@
 }
 
 .popup {
+  position: fixed;
   width: 100%;
-  height: 600px;
+  height: 740px;
   max-width: 400px;
   border-radius: 10px;
   overflow: hidden;
