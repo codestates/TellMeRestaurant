@@ -1,13 +1,10 @@
-require('dotenv').config();
-const https = require('https');
-const cors = require('cors');
-const cookieParser = require('cookie-parser');
 const express = require('express');
 const app = express();
+const cors = require('cors');
+const cookieParser = require('cookie-parser')
 
-const controllers = require('./controllers');
 
-
+// 미들웨어 세팅
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(
@@ -18,10 +15,19 @@ app.use(
   })
 );
 app.use(cookieParser());
-app.get('/signup',controllers.signup)
 
+// 라우터 세팅
+const controllers = require('./controllers');
+
+app.get('/auth', controllers.auth);
+app.post('/signup', controllers.signup);
+app.post('/signin', controllers.signin);
+app.post('/signout', controllers.signout);
+
+// 서버실행
 const HTTPS_PORT = process.env.HTTPS_PORT || 4000;
 
 let server;
-server = app.listen(HTTPS_PORT,console.log(`서버 열림 ${HTTPS_PORT}`))
-module.exports=server
+server = app.listen(HTTPS_PORT, () => console.log(`https server runnning ${HTTPS_PORT}`));
+
+module.exports = server;
