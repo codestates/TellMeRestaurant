@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jua&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
 
 span {
   display: block;
@@ -24,14 +26,15 @@ span {
 }
 
 .teamname {
-  font-family: "Fredoka One", cursive;
+  font-family: "Varela Round", cursive;
   font-size: 1.2rem;
+  font-weight: 30px;
   display: flex;
   flex-direction: column;
   align-items: unset;
   margin-top: 1rem;
   margin-bottom: rem;
-  color: rgb(85, 85, 85);
+  color: black;
 }
 .nameList {
   list-style: none;
@@ -39,7 +42,6 @@ span {
   justify-content: center;
   margin-top: 0.2rem;
   margin-right: 1.8rem;
-
   color: white;
 }
 .member:link {
@@ -50,6 +52,7 @@ span {
   color: white;
   white-space: nowrap;
 }
+
 .member:hover {
   color: rgb(106, 126, 191);
 }
