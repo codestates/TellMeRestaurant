@@ -32,7 +32,7 @@ const Myinfo = ({ info, accessToken, isLogin }) => {
                   닉네임 :
                   <input
                     className={styles.input}
-                    value={`유저의 닉네임`}
+                    value={info.userId}
                     /* 나중에 info.userId 로 바꿔야함 지금오류남 */
                     readOnly
                   ></input>
@@ -41,7 +41,7 @@ const Myinfo = ({ info, accessToken, isLogin }) => {
                   모바일 :
                   <input
                     className={styles.input}
-                    value={`유저 데이터 번호`}
+                    value={info.mobile}
                     readOnly
                   ></input>
                 </span>

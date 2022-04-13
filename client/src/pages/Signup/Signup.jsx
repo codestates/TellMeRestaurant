@@ -67,7 +67,7 @@ function Signup({ clickSigninBtn, setIsSignUpClicked, clickCloseBtn }) {
     // http://ec2-3-34-191-91.ap-northeast-2.compute.amazonaws.com/
     axios
       .post(
-        "http://ec2-3-34-191-91.ap-northeast-2.compute.amazonaws.com/sign-up",
+        "http://ec2-13-125-219-156.ap-northeast-2.compute.amazonaws.com/sign-up",
         userData,
         {
           "Content-Type": "application/json",
