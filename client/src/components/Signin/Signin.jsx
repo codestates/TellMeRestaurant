@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
-import Signup from "../../pages/Signup/Signup";
+import Signup from "../../pages/Signup/Signup.jsx";
 import styles from "./Signin.module.css";
 import Google from "./Google";
 

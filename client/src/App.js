@@ -1,5 +1,5 @@
 import "./App.css";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { createBrowserHistory } from "history";
 import Navbar from "./components/Navbar/Navbar";
@@ -10,6 +10,7 @@ import PlusButton from "./components/ScrollButton/PlusButton";
 import Writing from "./pages/writing/Writing";
 import Footer from "./pages/Footer/Footer";
 import axios from "axios";
+import MainFeed from "./pages/Mainpost/MainFeed";
 
 function App() {
   const [accessToken, setAccessToken] = useState(null);
@@ -69,17 +70,56 @@ function App() {
     setAccessToken(null);
   };
 
+  /*********************메인 페이지 컨트롤 부분***************************/
+  const [feeds, setFeeds] = useState([]); //전체 피드리스트
+  const [sortValue, setSortValue] = useState("최신순");
+
+  useEffect(() => {
+    setTimeout(() => {
+      axios
+        .get(
+          "http://ec2-3-34-191-91.ap-northeast-2.compute.amazonaws.com/get-all-post"
+        )
+        .then((res) => {
+          if (sortValue === "최신순") {
+            let result = res.data.data.sort((a, b) => {
+              return new Date(b.created_at) - new Date(a.created_at);
+            }); //오름차순 정렬
+            setFeeds(
+              result.map((el) => {
+                return { ...el, tags: JSON.parse(el.tags) };
+              })
+            ); //tag를 합침
+          } else if (sortValue === "인기순") {
+            let result = res.data.data.sort((a, b) => {
+              return (
+                b.option1_count +
+                b.option2_count -
+                (a.option1_count + a.option2_count)
+              );
+            });
+            setFeeds(
+              result.map((el) => {
+                return { ...el, tags: JSON.parse(el.tags) };
+              })
+            );
+          }
+        });
+    }, 300);
+  }, [listRender]);
+
   return (
     <div className="App">
       <Router>
         <Navbar
+          setListRender={() => setListRender(!listRender)}
           handleResponseSuccess={handleResponseSuccess}
           isLogin={isLogin}
           onSignout={onSignout}
         />
         <Switch>
           <Route path="/" exact>
-            <Main />
+            <MainFeed feeds={feeds} />
           </Route>
           <Route path="/mypage" exact>
             <Mypage isLogin={isLogin} info={info} />
