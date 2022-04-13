@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jua&display=swap");
+
+.backdrop {
+  position: fixed;
+  z-index: 4;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  display: grid;
+  place-items: center;
+}
+
+.signup {
+  color: white;
+  font-size: 1.5em;
+}
+.warningtext {
+  font-family: "Jua";
+  font-size: 16px;
+  letter-spacing: 1.2px;
+}
+
+.popup {
+  width: 100%;
+  height: 600px;
+  max-width: 400px;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: cornflowerblue;
+  z-index: 5;
+}
+
+.popuphead {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.inputText {
+  width: 70%;
+  border: 0;
+  color: white;
+  font-size: medium;
+  border-bottom: 2px solid white;
+  background-color: cornflowerblue;
+  margin-bottom: 30px;
+  padding-bottom: 7px;
+  outline: none;
+}
+
+.inputText::placeholder {
+  color: white;
+}
+
+.btnsignup {
+  outline: 0;
+  border: 0;
+  color: white;
+  width: 70%;
+  height: 50px;
+  border-radius: 3em;
+  background-color: #dd7171;
+  cursor: pointer;
+}
+
+.exit {
+  cursor: pointer;
+  outline: 0;
+  border: 0;
+  width: 70%;
+  height: 50px;
+  background-color: cornflowerblue;
+  color: white;
+}
+
+.exit:hover {
+  color: blueviolet;
+}
+.allexit {
+  cursor: pointer;
+  outline: 0;
+  border: 0;
+  width: 70%;
+  height: 50px;
+  background-color: cornflowerblue;
+  color: white;
+}
+
+.alert {
+  color: red;
+  position: relative;
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+}

@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+
+.navbody {
+  background-color: white;
+  width: 100%;
+  height: 4rem;
+  position: sticky;
+  top: 0;
+  border-bottom: solid 1px rgb(212, 212, 212);
+  display: grid;
+  place-items: center;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 1.5rem;
+  font-family: "Varela Round", cursive;
+}
+
+.name {
+  vertical-align: middle;
+}
+.name1 {
+  text-decoration: none;
+  color: black;
+}
+
+.menu {
+  margin: 1.5rem;
+  right: 0;
+  font-weight: 300;
+  position: absolute;
+}
+
+.menu1 {
+  text-decoration: none;
+  font-family: "Varela Round", cursive;
+  font-weight: 329;
+  font-size: medium;
+  background-color: white;
+  border: none;
+  color: black;
+  margin: 0.7rem;
+}
+.menu2 {
+  font-family: "Varela Round", cursive;
+  text-decoration: none;
+  color: black;
+  margin: 0.7rem;
+}
+
+.menu2:hover {
+  color: #4000c7;
+}
+.menu1:hover {
+  color: #4000c7;
+}

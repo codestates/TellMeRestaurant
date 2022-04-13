@@ -1,0 +1,27 @@
+.container {
+  margin: 0 auto;
+  width: 500px;
+}
+.topBtn {
+  cursor: pointer;
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  color: #fbc000;
+  background-color: white;
+
+  font-size: 1.5rem;
+
+  padding: 0.5rem;
+  cursor: pointer;
+
+  border: 1.5px solid #fbc000;
+  border-radius: 50%;
+  display: flex;
+  opacity: 0.8;
+  box-shadow: -1px 0 4px rgba(14, 55, 63, 0.15);
+}
+
+.topBtnActive {
+  display: none;
+}
