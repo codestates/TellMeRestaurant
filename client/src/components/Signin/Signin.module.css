@@ -2,7 +2,7 @@
 
 .backdrop {
   position: fixed;
-  z-index: 2;
+  z-index: 3;
   top: 0;
   left: 0;
   right: 0;
@@ -33,7 +33,7 @@
   justify-content: center;
   background-color: cornflowerblue;
   box-shadow: 5px 10px 10px 1px rgba(0, 0, 0, 0.3);
-  z-index: 3;
+  z-index: 4;
   text-align: center;
 }
 
