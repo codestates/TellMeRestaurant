@@ -1,68 +1,28 @@
-const Sequelize = require("sequelize");
-module.exports = function (sequelize, DataTypes) {
-  const users = sequelize.define(
-    "users",
-    {
-      id: {
-        autoIncrement: true,
-        type: DataTypes.INTEGER,
-        allowNull: false,
-        primaryKey: true,
-      },
-      user_id: {
-        type: DataTypes.STRING(255),
-        allowNull: true,
-      },
-      password: {
-        type: DataTypes.STRING(255),
-        allowNull: true,
-      },
-      nickname: {
-        type: DataTypes.STRING(255),
-        allowNull: true,
-      },
-      sign_up_type: {
-        type: DataTypes.STRING(255),
-        allowNull: true,
-      },
-      phone_number: {
-        type: DataTypes.STRING(255),
-        allowNull: true,
-      },
-      account_type: {
-        type: DataTypes.INTEGER,
-        allowNull: true,
-      },
-      created_at: {
-        type: DataTypes.DATE,
-        allowNull: true,
-      },
-      updated_at: {
-        type: DataTypes.DATE,
-        allowNull: true,
-      },
-    },
-    {
-      sequelize,
-      tableName: "users",
-      timestamps: false,
-      indexes: [
-        {
-          name: "PRIMARY",
-          unique: true,
-          using: "BTREE",
-          fields: [{ name: "id" }],
-        },
-      ],
+'use strict';
+const {
+  Model
+} = require('sequelize');
+module.exports = (sequelize, DataTypes) => {
+  class users extends Model {
+    /**
+     * Helper method for defining associations.
+     * This method is not a part of Sequelize lifecycle.
+     * The `models/index` file will call this method automatically.
+     */
+    static associate(models) {
+      // define association here
     }
-  );
-
-  users.associate = function (models) {
-    users.hasMany(models.comments, { as: "comments", foreignKey: "user_id" });
-
-    users.hasMany(models.post, { as: "posts", foreignKey: "user_id" });
-
-    users.hasMany(models.voter, { as: "voters", foreignKey: "user_id" });
-  };
+  }
+  users.init({
+    user_id: DataTypes.STRING,
+    password: DataTypes.STRING,
+    nickname: DataTypes.STRING,
+    phone_number: DataTypes.STRING,
+    sign_up_type: DataTypes.STRING,
+    account_type: DataTypes.INTEGER
+  }, {
+    sequelize,
+    modelName: 'users',
+  });
   return users;
 };
