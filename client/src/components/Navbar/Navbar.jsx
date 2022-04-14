@@ -19,13 +19,22 @@ function Navbar({ handleResponseSuccess, isLogin, onSignout }) {
   return (
     <div>
       <div className={styles.navbody}>
+        <span className={styles.leftLogo}>
+          <Link to="/">
+            <img
+              src="../../../images/TellMeRestaurant.png"
+              className={styles.logoimg}
+            ></img>
+          </Link>
+        </span>
         <span className={styles.title}>
           <span className={styles.name}>
             <Link to="/" className={styles.name1}>
-              aroundbestR
+              TellMeRestaurant
             </Link>
           </span>
         </span>
+
         <div className={styles.menu}>
           {isSigninClicked ? (
             <Signin

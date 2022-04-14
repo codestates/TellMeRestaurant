@@ -16,6 +16,16 @@
   font-size: 1.5rem;
   font-family: "Varela Round", cursive;
 }
+.leftLogo {
+  margin: 1.5rem;
+  left: 0;
+  position: absolute;
+}
+.logoimg {
+  width: 32%;
+  height: 32%;
+  border-radius: 100%;
+}
 
 .name {
   vertical-align: middle;
