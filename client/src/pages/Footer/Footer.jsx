@@ -20,12 +20,20 @@ const Footer = (props) => {
                 </a>
               </li>
               <li>
-                <a target="_blank" href="" className={styles.member}>
+                <a
+                  target="_blank"
+                  href="https://github.com/JKS5"
+                  className={styles.member}
+                >
                   Full-stack 이규동
                 </a>
               </li>
               <li>
-                <a target="_blank" href="" className={styles.member}>
+                <a
+                  target="_blank"
+                  href="https://github.com/nicesiu"
+                  className={styles.member}
+                >
                   Back-end 황시우
                 </a>
               </li>
