@@ -28,6 +28,11 @@
   font-family: "Jua";
 }
 
+.content1 {
+  font-family: "Jua";
+  margin-bottom: 10px;
+}
+
 .title {
   font-size: large;
   font-weight: 600;

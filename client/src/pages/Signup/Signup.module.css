@@ -3,7 +3,7 @@
 
 .backdrop {
   position: fixed;
-  z-index: 4;
+  z-index: 5;
   top: 0;
   left: 0;
   right: 0;
@@ -34,7 +34,7 @@
   flex-direction: column;
   justify-content: center;
   background-color: cornflowerblue;
-  z-index: 5;
+  z-index: 6;
 }
 
 .popuphead {

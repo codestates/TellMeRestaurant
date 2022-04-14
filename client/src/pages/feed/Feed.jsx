@@ -23,7 +23,13 @@ function Feed({ selectedFeed }) {
               <div className={styles.hashtag}>{el}</div>
             ))}
           </div>
-
+          {/* <div className={styles.content1}>
+            #경기 성남시 분당구 대왕판교로606번길 45 (삼평동, 판교역
+            푸르지오시티)
+          </div>  예시!*/}
+          {/* <div className={styles.content1}>
+            #{selectedFeed.address}
+          </div> 프롭스로 받아오면 이거 주석해제*/}
           <div className={styles.content}>{selectedFeed.contents}</div>
         </div>
       </div>
