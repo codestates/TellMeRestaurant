@@ -31,7 +31,7 @@ function App() {
     setAccessToken(accessToken);
     axios
       .get(
-        "http://ec2-3-34-191-91.ap-northeast-2.compute.amazonaws.com/user/auth",
+        "http://ec2-13-125-219-156.ap-northeast-2.compute.amazonaws.com/user/auth",
         {
           headers: {
             authorization: accessToken,
@@ -80,7 +80,7 @@ function App() {
     setTimeout(() => {
       axios
         .get(
-          "http://ec2-3-34-191-91.ap-northeast-2.compute.amazonaws.com/get-all-post"
+          "http://ec2-13-125-219-156.ap-northeast-2.compute.amazonaws.com/get-all-post"
         )
         .then((res) => {
           if (sortValue === "최신순") {
