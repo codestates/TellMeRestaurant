@@ -1,6 +1,6 @@
 const { isAuthorized } = require("./tokenFunction");
 const { post } = require("../models");
-const { voter } = require("../models");
+// const { voter } = require("../models");
 
 module.exports = {
   deleteMyPost: (req, res) => {
