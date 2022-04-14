@@ -32,7 +32,7 @@ const Mypage = ({
 
     axios
       .get(
-        "http://ec2-3-34-191-91.ap-northeast-2.compute.amazonaws.com/user/auth",
+        "http://ec2-13-125-219-156.ap-northeast-2.compute.amazonaws.com/user/auth",
         {
           headers: {
             authorization: accessToken,
@@ -44,7 +44,7 @@ const Mypage = ({
         const { id } = result.data.data.userInfo;
         axios
           .get(
-            `http://ec2-3-34-191-91.ap-northeast-2.compute.amazonaws.com/user/posting-list/${id}`,
+            `http://ec2-13-125-219-156.ap-northeast-2.compute.amazonaws.com/user/posting-list/${id}`,
             {
               headers: {
                 authorization: accessToken,

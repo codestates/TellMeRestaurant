@@ -15,7 +15,7 @@ import Feed from "./pages/feed/Feed";
 
 function App() {
   const [accessToken, setAccessToken] = useState(null);
-  const [isLogin, setIsLogin] = useState(true);
+  const [isLogin, setIsLogin] = useState(false);
   const [info, setInfo] = useState(null);
   const [isGoogle, setIsGoogle] = useState(false);
 

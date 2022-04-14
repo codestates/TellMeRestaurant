@@ -22,7 +22,7 @@ function Navbar({ handleResponseSuccess, isLogin, onSignout }) {
         <span className={styles.leftLogo}>
           <Link to="/">
             <img
-              src="../../../images/TellMeRestaurant.png"
+              src="../../../images/logo1.png"
               className={styles.logoimg}
             ></img>
           </Link>
