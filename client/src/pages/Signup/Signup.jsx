@@ -64,7 +64,7 @@ function Signup({ clickSigninBtn, setIsSignUpClicked, clickCloseBtn }) {
       mobile: mobile,
       // signUpType:signUpType,
     };
-    // http://ec2-3-34-191-91.ap-northeast-2.compute.amazonaws.com/
+
     axios
       .post(
         "http://ec2-13-125-219-156.ap-northeast-2.compute.amazonaws.com/sign-up",
