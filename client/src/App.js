@@ -12,10 +12,11 @@ import Footer from "./pages/Footer/Footer";
 import axios from "axios";
 import MainFeed from "./pages/Mainpost/MainFeed";
 import Feed from "./pages/feed/Feed";
+import { initialState } from "./initialState";
 
 function App() {
   const [accessToken, setAccessToken] = useState(null);
-  const [isLogin, setIsLogin] = useState(false);
+  const [isLogin, setIsLogin] = useState(true);
   const [info, setInfo] = useState(null);
   const [isGoogle, setIsGoogle] = useState(false);
 
@@ -71,44 +72,44 @@ function App() {
   };
 
   /*********************메인 페이지 컨트롤 부분***************************/
-  const [feeds, setFeeds] = useState([]); //전체 피드리스트
+  const [feeds, setFeeds] = useState(initialState.items); //전체 피드리스트
   const [sortValue, setSortValue] = useState("최신순");
   const [listRender, setListRender] = useState(true);
   const [selectedFeed, setSelectedFeed] = useState(null);
 
-  useEffect(() => {
-    setTimeout(() => {
-      axios
-        .get(
-          "http://ec2-13-125-219-156.ap-northeast-2.compute.amazonaws.com/get-all-post"
-        )
-        .then((res) => {
-          if (sortValue === "최신순") {
-            let result = res.data.data.sort((a, b) => {
-              return new Date(b.created_at) - new Date(a.created_at);
-            }); //오름차순 정렬
-            setFeeds(
-              result.map((el) => {
-                return { ...el, tags: JSON.parse(el.tags) };
-              })
-            ); //tag를 합침
-          } else if (sortValue === "인기순") {
-            let result = res.data.data.sort((a, b) => {
-              return (
-                b.option1_count +
-                b.option2_count -
-                (a.option1_count + a.option2_count)
-              );
-            });
-            setFeeds(
-              result.map((el) => {
-                return { ...el, tags: JSON.parse(el.tags) };
-              })
-            );
-          }
-        });
-    }, 300);
-  }, [listRender]);
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     axios
+  //       .get(
+  //         "http://ec2-3-34-191-91.ap-northeast-2.compute.amazonaws.com/get-all-post"
+  //       )
+  //       .then((res) => {
+  //         if (sortValue === "최신순") {
+  //           let result = res.data.data.sort((a, b) => {
+  //             return new Date(b.created_at) - new Date(a.created_at);
+  //           }); //오름차순 정렬
+  //           setFeeds(
+  //             result.map((el) => {
+  //               return { ...el, tags: JSON.parse(el.tags) };
+  //             })
+  //           ); //tag를 합침
+  //         } else if (sortValue === "인기순") {
+  //           let result = res.data.data.sort((a, b) => {
+  //             return (
+  //               b.option1_count +
+  //               b.option2_count -
+  //               (a.option1_count + a.option2_count)
+  //             );
+  //           });
+  //           setFeeds(
+  //             result.map((el) => {
+  //               return { ...el, tags: JSON.parse(el.tags) };
+  //             })
+  //           );
+  //         }
+  //       });
+  //   }, 300);
+  // }, [listRender]);
 
   const select = (el) => {
     //썸네일 클릭 시

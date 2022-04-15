@@ -18,9 +18,10 @@ function FeedContent({ feed, handleClick }) {
         <h3 className={styles.titletitle}>{feed.title}</h3>
 
         <div className={styles.titlehashtag}>
-          {feed.tags.map((el) => (
+          {/* {feed.tags.map((el) => (
             <span className={styles.hashtag}>{el}</span>
-          ))}
+          ))} */}
+          <span className={styles.hashtag}>{feed.tags}</span>
         </div>
 
         <div className={styles.title1}>{feed.contents}</div>

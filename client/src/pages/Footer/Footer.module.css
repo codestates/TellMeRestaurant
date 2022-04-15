@@ -42,15 +42,15 @@ span {
   justify-content: center;
   margin-top: 0.2rem;
   margin-right: 1.8rem;
-  color: white;
 }
+
 .member:link {
   text-decoration: none;
   margin: 0 0.4rem;
   text-decoration-line: none;
   font-size: 0.7rem;
-  color: white;
   white-space: nowrap;
+  color: black;
 }
 
 .member:hover {

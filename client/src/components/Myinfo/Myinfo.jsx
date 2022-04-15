@@ -32,7 +32,7 @@ const Myinfo = ({ info, accessToken, isLogin }) => {
                   닉네임 :
                   <input
                     className={styles.input}
-                    value={info.userId}
+                    value={info.userid}
                     /* 나중에 info.userId 로 바꿔야함 지금오류남 */
                     readOnly
                   ></input>
