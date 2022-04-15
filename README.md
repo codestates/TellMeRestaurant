@@ -8,7 +8,7 @@
 이런 것들을 간편하고 빠르게 정보를 보여주는 Tell me Restaurant ! 
 
 
-Tell Me Restaurant 에서는 
+Tell Me Restaurant 에서는 이런것들을 할 수 있습니다.
 
 * 간편한 로그인
 * 태그 기능으로 원하는 지역 맛집 보기
