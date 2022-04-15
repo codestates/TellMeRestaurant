@@ -91,6 +91,16 @@ function Signin({ clickCloseBtn, setIsSigninClicked, handleResponseSuccess }) {
               <button
                 className={styles.btnsignup}
                 type="submit"
+                onClick={handleLogin}
+              >
+                로그인
+              </button>
+            </div>
+            <br />
+            <div>
+              <button
+                className={styles.btnsignup}
+                type="submit"
                 onClick={clickSignUpBtn}
               >
                 회원가입
@@ -103,15 +113,7 @@ function Signin({ clickCloseBtn, setIsSigninClicked, handleResponseSuccess }) {
               </button>
             </div>
             <br />
-            <div>
-              <button
-                className={styles.btnsignup}
-                type="submit"
-                onClick={handleLogin}
-              >
-                로그인
-              </button>
-            </div>
+
             <br />
             <div>
               <button className={styles.exit} onClick={clickCloseBtn}>

@@ -14,7 +14,7 @@ const Footer = (props) => {
                   target="_blank"
                   href="https://github.com/LEEJAESHIN"
                   className={styles.member}
-                  alt="주소"
+                  alt="링크"
                 >
                   Front-end 이재신
                 </a>
@@ -24,6 +24,7 @@ const Footer = (props) => {
                   target="_blank"
                   href="https://github.com/JKS5"
                   className={styles.member}
+                  alt="링크"
                 >
                   Full-stack 이규동
                 </a>
@@ -33,6 +34,7 @@ const Footer = (props) => {
                   target="_blank"
                   href="https://github.com/nicesiu"
                   className={styles.member}
+                  alt="링크"
                 >
                   Back-end 황시우
                 </a>
@@ -49,3 +51,4 @@ const Footer = (props) => {
 };
 
 export default Footer;
+// https://github.com/nicesiu

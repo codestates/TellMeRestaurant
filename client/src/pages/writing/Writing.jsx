@@ -93,7 +93,7 @@ function Writing({ isLogin, setListRender, accessToken }) {
   const firstImgHandle = (event) => {
     //input 태그를 통한 선택한 파일 객체 ([0]에 저장됌)
     const imageFile = event.target.files[0];
-
+    console.log(imageFile);
     if (!imageFile) {
       return setFirstImg(null);
     }
