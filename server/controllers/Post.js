@@ -12,13 +12,7 @@ module.exports = {
       res.status(401).send("invalid");
     } else {
       if (
-        !title ||
-        !contents ||
-        !choice_1 ||
-        !choice_2 ||
-        !img_1 ||
-        !img_2 ||
-        !hashTags
+        !title
       ) {
         res
           .status(422)
